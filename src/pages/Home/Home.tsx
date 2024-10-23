@@ -1,4 +1,4 @@
-import '/src/styles/Home.css';
+import styles from './Home.module.css';
 import lightgreenflower from '/src/assets/icons/lightgreenflower.svg';
 import pinkflower from '/src/assets/icons/pinkflower.svg';
 import whiteflower from '/src/assets/icons/whiteflower.svg';
@@ -10,37 +10,37 @@ import forth from '/src/assets/images/gift.png';
 import taylor from '/src/assets/images/taylor.png';
 
 const FloralDescriptionBox = ({ icon, heading, description }) => (
-    <div className="floral-description-box">
-        <div className='floral-name'>
-            <img src={icon} alt="Flower Icon" className="flower-icon" />
-            <p className="floral-heading">{heading}</p>
+    <div className={styles.floralDescriptionBox}>
+        <div className={styles.floralName}>
+            <img src={icon} alt="Flower Icon" className={styles.flowerIcon} />
+            <p className={styles.floralHeading}>{heading}</p>
         </div>
-        <p className="floral-description">{description}</p>
+        <p className={styles.floralDescription}>{description}</p>
     </div>
 );
 
 const CatalogSection = ({ image, description, marginTop }) => (
-    <div className='section' style={{ marginTop }}>
-        <img src={image} alt="Bouquet-catalog" className='catalog-image'/>
-        <p className="catalog-description">{description}</p>
+    <div className={styles.section} style={{ marginTop }}>
+        <img src={image} alt="Bouquet-catalog" className={styles.catalogImage}/>
+        <p className={styles.catalogDescription}>{description}</p>
     </div>
 );
 
 const HelperDescription = ({ icon, description }) => (
-    <div className='floral-name'>
-        <img src={icon} alt="Flower Icon" className="flower-icon" />
-        <p className="helper-description lifted-text">{description}</p>
+    <div className={styles.floralName}>
+        <img src={icon} alt="Flower Icon" className={styles.flowerIcon} />
+        <p className={styles.helperDescription + ' ' + styles.liftedText}>{description}</p>
     </div>
 );
 
 function Home() {
     return (
-        <div className='home'>
-            <div className='shop'>
-                <div className='shop-info'>
-                    <p className="welcome-message">Добро пожаловать!</p>
-                    <p className="welcome-message-heading">У нас вы найдете:</p>
-                    <div className="floral-services-section">
+        <div className={styles.home}>
+            <div className={styles.shop}>
+                <div className={styles.shopInfo}>
+                    <p className={styles.welcomeMessage}>Добро пожаловать!</p>
+                    <p className={styles.welcomeMessageHeading}>У нас вы найдете:</p>
+                    <div className={styles.floralServicesSection}>
                         <FloralDescriptionBox
                             icon={lightgreenflower}
                             heading="Широкий выбор цветов"
@@ -64,11 +64,11 @@ function Home() {
                     </div>
                 </div>
 
-                <img src={bouquet} alt="Bouquet" className='bouquet-image' />
+                <img src={bouquet} alt="Bouquet" className={styles.bouquetImage} />
 
-                <div className='shop-info' style={{ marginTop: '300px' }}>
-                    <p className="welcome-message">Petals Whispers - это:</p>
-                    <div className="floral-services-section">
+                <div className={styles.shopInfo} style={{ marginTop: '300px' }}>
+                    <p className={styles.welcomeMessage}>Petals Whispers - это:</p>
+                    <div className={styles.floralServicesSection}>
                         <FloralDescriptionBox
                             icon={pinkflower}
                             heading="Качество"
@@ -88,9 +88,9 @@ function Home() {
                 </div>
             </div>
 
-            <div className='catalog'>
-                <div className='list'>
-                    <div className='list-inner'>
+            <div className={styles.catalog}>
+                <div className={styles.list}>
+                    <div className={styles.listInner}>
                         <CatalogSection image={first} description="Для особых случаев" marginTop="-130px" />
                         <CatalogSection image={second} description="Для подарка без повода" marginTop="0" />
                         <CatalogSection image={third} description="Акции и специальные предложения" marginTop="-130px" />
@@ -99,22 +99,22 @@ function Home() {
                 </div>
             </div>
 
-            <div className='helper'>
-                <div className='helper-content'>
-                    <div className='helper-text'>
-                        <div className='helper-heading'>Персональный помощник</div>
+            <div className={styles.helper}>
+                <div className={styles.helperContent}>
+                    <div className={styles.helperText}>
+                        <div className={styles.helperHeading}>Персональный помощник</div>
                         <HelperDescription icon={whiteflower} description="Рекомендации именно для вас и ваших близких" />
                         <HelperDescription icon={whiteflower} description="Консультация по текущим акциям" />
                         <HelperDescription icon={whiteflower} description="Знакомство и общение с брендом" />
                     </div>
-                    <img src={taylor} alt="Taylor" className='helper-image' />
-                    <div className='helper-text-2'>
-                        <p className="helper-description" style={{ fontWeight: "500", marginTop: "30px"  }}>БЕСПЛАТНО!</p>
-                        <p className="helper-description" style={{ width: "300px" }}>Ежедневно с 9 до 21</p>
-                        <p className="helper-description" style={{ fontWeight: "500", marginTop: "20px" }}>НА СВЯЗИ!</p>
-                        <p className="helper-description">Знает ответ на любой вопрос</p>
+                    <img src={taylor} alt="Taylor" className={styles.helperImage} />
+                    <div className={styles.helperText2}>
+                        <p className={styles.helperDescription} style={{ fontWeight: "500", marginTop: "30px"  }}>БЕСПЛАТНО!</p>
+                        <p className={styles.helperDescription} style={{ width: "300px" }}>Ежедневно с 9 до 21</p>
+                        <p className={styles.helperDescription} style={{ fontWeight: "500", marginTop: "20px" }}>НА СВЯЗИ!</p>
+                        <p className={styles.helperDescription}>Знает ответ на любой вопрос</p>
                     </div>
-                    <button className="contact-button-style">Связаться</button>
+                    <button className={styles.contactButtonStyle}>Связаться</button>
                 </div>
             </div>
         </div>

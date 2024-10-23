@@ -5,7 +5,7 @@
     padding-bottom: 150px;
 }
 
-.shop-info {
+.shopInfo {
     box-sizing: border-box;
     width: 100%;
     margin: 50px;
@@ -14,57 +14,57 @@
     gap: 15px;
 }
 
-.welcome-message {
+.welcomeMessage {
     font: 500 40px "Alegreya Sans";
     color: black;
     margin: 0;
 }
 
-.welcome-message-heading {
+.welcomeMessageHeading {
     font: 400 30px "Alegreya Sans";
     color: black;
     margin: 0;
 }
 
-.floral-services-section {
+.floralServicesSection {
     display: flex;
     flex-direction: column;
     max-width: 371px;
     gap: 10px;
 }
 
-.floral-heading {
+.floralHeading {
     font: 400 25px "Alegreya Sans", sans-serif;
     color: black;
     margin: 0;
 }
 
-.floral-description {
+.floralDescription {
     font: 400 20px "Alegreya Sans", sans-serif;
     color: black;
     margin: 0;
     padding-left: 35px;
 }
 
-.floral-description-box{
+.floralDescriptionBox {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.flower-icon {
+.flowerIcon {
     width: 25px;
     height: 25px;
     margin-right: 10px;
     align-self: flex-start;
 }
 
-.floral-name {
+.floralName {
     display: flex;
     flex-direction: row;
 }
 
-.bouquet-image {
+.bouquetImage {
     width: 467px;
     height: 754px;
     z-index: 1;
@@ -81,7 +81,7 @@
     box-sizing: border-box;
 }
 
-.list-inner {
+.listInner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -96,12 +96,12 @@
     width: 279px;
 }
 
-.catalog-description{
+.catalogDescription {
     font: 600 30px "Alegreya Sans", sans-serif;
     color: black;
 }
 
-.helper-content {
+.helperContent {
     background-image: url('/src/assets/images/block.png');
     background-size: 1340px 455px;
     background-position: center;
@@ -114,34 +114,35 @@
     position: relative;
 }
 
-.helper-text {
+.helperText {
     display: flex;
     flex-direction: column;
     gap: 40px;
     position: relative;
 }
 
-.helper-heading {
+.helperHeading {
     color: black;
     font-family: "Cormorant Garamond-Regular", Helvetica;
     font-size: 70px;
     color: black;
     width: 850px;
 }
-.helper-description {
+
+.helperDescription {
     font: 400 30px "Alegreya Sans", sans-serif;
     color: black;
     margin: 0;
 }
 
-.helper-image {
+.helperImage {
     width: 330px;
     margin-top: 75px;
     right: 400px;
     position: absolute;
 }
 
-.contact-button-style {
+.contactButtonStyle {
     box-sizing: border-box;
     display: block;
     flex: 0 0 auto;
@@ -161,6 +162,6 @@
     right: 70px;
 }
 
-.lifted-text {
+.liftedText {
     margin-top: -5px;
 }

@@ -1,14 +1,14 @@
-import '/src/styles/About.css';
+import styles from './About.module.css';
 
 function About() {
     return (
-        <div className="about-us">
-            <div className="about-header">О нас</div>
-            <div className="about-info">
-                <div className='about-block'>
-                    <div className="about-description">
-                        <span className="about-heading-style">Добро пожаловать в Petal Flowers!</span>
-                        <div className="about-text">
+        <div className={styles.aboutUs}>
+            <div className={styles.aboutHeader}>О нас</div>
+            <div className={styles.aboutInfo}>
+                <div className={styles.aboutBlock}>
+                    <div className={styles.aboutDescription}>
+                        <span className={styles.aboutHeadingStyle}>Добро пожаловать в Petal Flowers!</span>
+                        <div className={styles.aboutText}>
                             <p>Меня зовут Юлия, и я создатель этого цветочного салона!</p>
                             <p>
                                 С самого детства меня привлекали цветы и их необыкновенная красота. Они способны оживить
@@ -28,15 +28,15 @@ function About() {
                             </p>
                         </div>
                     </div>
-                    <div className="team-join">
-                        <p className="team-join-heading">Присоединиться к команде!</p>
+                    <div className={styles.teamJoin}>
+                        <p className={styles.teamJoinHeading}>Присоединиться к команде!</p>
                     </div>
                 </div>
-                <div className="founder-info">
-                    <img src="/src/assets/images/founder.png" className="flower-avatar" />
-                    <div className="founder-info-container">
-                        <p className="founder-text">- Основатель бренда</p>
-                        <p className="founder-name">Полуян Юлия Александровна</p>
+                <div className={styles.founderInfo}>
+                    <img src="/src/assets/images/founder.png" className={styles.flowerAvatar} />
+                    <div className={styles.founderInfoContainer}>
+                        <p className={styles.founderText}>- Основатель бренда</p>
+                        <p className={styles.founderName}>Полуян Юлия Александровна</p>
                     </div>
                 </div>
             </div>

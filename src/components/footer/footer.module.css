@@ -5,7 +5,7 @@
     display: flex;
 }
 
-.footer-content {
+.footerContent {
     margin: 20px;
     width: 100%;
     display: flex;
@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-.footer-title {
+.footerTitle {
     margin: 0;
     font-family: "Cormorant Garamond-Regular", Helvetica;
     font-size: 80px;
@@ -22,7 +22,7 @@
     text-decoration: none;
 }
 
-.footer-columns {
+.footerColumns {
     display: flex;
     gap: 80px;
     font-family: "Alegreya Sans", sans-serif;
@@ -30,11 +30,11 @@
     font-weight: 400;
 }
 
-.footer-column {
+.footerColumn {
     text-align: left;
 }
 
-.footer-contact {
+.footerContact {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -45,12 +45,12 @@
     gap: 20px;
 }
 
-.social-icons {
+.socialIcons {
     display: flex;
     gap: 15px;
 }
 
-.social-icons svg {
+.socialIcons svg {
     font-size: 40px;
 }
 
@@ -59,12 +59,12 @@
     margin: 0;
 }
 
-.footer-link {
-    text-decoration: none; /* Убираем стандартное подчеркивание */
-    color: inherit; /* Устанавливаем цвет текста как наследуемый */
-    transition: text-decoration 0.3s; /* Плавный переход для подчеркивания */
+.footerLink {
+    text-decoration: none;
+    color: inherit;
+    transition: text-decoration 0.3s;
 }
 
-.footer-link:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
+.footerLink:hover {
+    text-decoration: underline;
 }

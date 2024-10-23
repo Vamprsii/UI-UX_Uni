@@ -1,4 +1,4 @@
-.about-us {
+.aboutUs {
     display: flex;
     flex-direction: column;
     gap: 90px;
@@ -8,7 +8,7 @@
     padding: 80px;
 }
 
-.about-header {
+.aboutHeader {
     text-align: center;
     font-family: "Alegreya Sans", sans-serif;
     font-size: 50px;
@@ -16,14 +16,14 @@
     z-index: 1;
 }
 
-.about-info {
+.aboutInfo {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
 }
 
-.about-block {
+.aboutBlock {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,69 +31,69 @@
     gap: 51px;
 }
 
-.about-description, .founder-info-container, .team-join {
+.aboutDescription, .founderInfoContainer, .teamJoin {
     border: 7px solid #F0D1E6;
     border-radius: 20px;
     background: #fff;
 }
 
-.about-description {
+.aboutDescription {
     width: 877px;
     padding: 20px;
     z-index: 1;
 }
 
-.about-text, .about-heading-style, .founder-text, .founder-name, .team-join-heading {
+.aboutText, .aboutHeadingStyle, .founderText, .founderName, .teamJoinHeading {
     font-family: "Alegreya Sans", sans-serif;
 }
 
-.about-text {
+.aboutText {
     font-size: 22px;
     font-weight: 400;
 }
 
-.about-heading-style {
+.aboutHeadingStyle {
     font-size: 30px;
     font-weight: 500;
 }
 
-.founder-info {
+.founderInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 110px;
 }
 
-.flower-avatar {
+.flowerAvatar {
     margin-bottom: 40px;
 }
 
-.founder-info-container {
+.founderInfoContainer {
     width: 400px;
     height: 85px;
 }
 
-.founder-text {
+.founderText {
     font-size: 20px;
     font-weight: 400;
     margin: 0;
     padding: 10px;
 }
 
-.founder-name {
+.founderName {
     font-size: 32px;
     font-weight: 400;
     margin: 0;
     text-align: center;
 }
 
-.team-join {
+.teamJoin {
     width: 420px;
     height: 60px;
     background: #F0D1E6;
 }
 
-.team-join-heading {
+.teamJoinHeading {
     font-size: 35px;
     font-weight: 500;
     margin: 0;
