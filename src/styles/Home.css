@@ -1,0 +1,166 @@
+.shop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 150px;
+}
+
+.shop-info {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.welcome-message {
+    font: 500 40px "Alegreya Sans";
+    color: black;
+    margin: 0;
+}
+
+.welcome-message-heading {
+    font: 400 30px "Alegreya Sans";
+    color: black;
+    margin: 0;
+}
+
+.floral-services-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 371px;
+    gap: 10px;
+}
+
+.floral-heading {
+    font: 400 25px "Alegreya Sans", sans-serif;
+    color: black;
+    margin: 0;
+}
+
+.floral-description {
+    font: 400 20px "Alegreya Sans", sans-serif;
+    color: black;
+    margin: 0;
+    padding-left: 35px;
+}
+
+.floral-description-box{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.flower-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    align-self: flex-start;
+}
+
+.floral-name {
+    display: flex;
+    flex-direction: row;
+}
+
+.bouquet-image {
+    width: 467px;
+    height: 754px;
+    z-index: 1;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url('/src/assets/images/back.png');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.list-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 279px;
+}
+
+.catalog-description{
+    font: 600 30px "Alegreya Sans", sans-serif;
+    color: black;
+}
+
+.helper-content {
+    background-image: url('/src/assets/images/block.png');
+    background-size: 1340px 455px;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    padding: 110px;
+    position: relative;
+}
+
+.helper-text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+}
+
+.helper-heading {
+    color: black;
+    font-family: "Cormorant Garamond-Regular", Helvetica;
+    font-size: 70px;
+    color: black;
+    width: 850px;
+}
+.helper-description {
+    font: 400 30px "Alegreya Sans", sans-serif;
+    color: black;
+    margin: 0;
+}
+
+.helper-image {
+    width: 330px;
+    margin-top: 75px;
+    right: 400px;
+    position: absolute;
+}
+
+.contact-button-style {
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 auto;
+    width: 239px;
+    min-width: 239px;
+    height: 56px;
+    margin-left: auto;
+    margin-right: 0;
+    font: 400 30px "Alegreya Sans", sans-serif;
+    color: black;
+    cursor: pointer;
+    background: white;
+    border: 3px solid #a4bea7;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 33px;
+    right: 70px;
+}
+
+.lifted-text {
+    margin-top: -5px;
+}
