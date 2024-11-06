@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import styles from './Home.module.css';
 import lightgreenflower from '/src/assets/icons/lightgreenflower.svg';
 import pinkflower from '/src/assets/icons/pinkflower.svg';
@@ -33,7 +34,52 @@ const HelperDescription = ({ icon, description }) => (
     </div>
 );
 
+const Review = ({ review }) => (
+    <div className={styles.reviewContainer}>
+        <div className={styles.review}>
+            <p className={styles.reviewText}>{review.body}</p>
+            <p className={styles.reviewAuthor}>{review.email}</p>
+        </div>
+    </div>
+);
+
 function Home() {
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/comments?postId=1')
+            .then(response => response.json())
+            .then(data => {
+                const translatedReviews = data.map(review => ({
+                    ...review,
+                    body: "Это отличный магазин цветов!",
+                    email: "client@example.com"
+                }));
+                setReviews(translatedReviews);
+            })
+            .catch(error => console.error('Error fetching reviews:', error));
+    }, []);
+
+    const floralServices = [
+        { icon: lightgreenflower, heading: "Широкий выбор цветов", description: "От классических роз до экзотических орхидей" },
+        { icon: lightgreenflower, heading: "Свежие букеты", description: "Мы создаем композиции на любой вкус и для любого случая" },
+        { icon: lightgreenflower, heading: "Оригинальные подарки", description: "Цветочные корзины, композиции в шляпных коробках" },
+        { icon: lightgreenflower, heading: "Профессиональные флористы", description: "Мы поможем вам создать идеальный букет и подобрать подходящий повод для его дарения" }
+    ];
+
+    const catalogSections = [
+        { image: first, description: "Для особых случаев", marginTop: "-130px" },
+        { image: second, description: "Для подарка без повода", marginTop: "0" },
+        { image: third, description: "Акции и специальные предложения", marginTop: "-130px" },
+        { image: forth, description: "Подарочные сертификаты", marginTop: "0" }
+    ];
+
+    const helperDescriptions = [
+        { icon: whiteflower, description: "Рекомендации именно для вас и ваших близких" },
+        { icon: whiteflower, description: "Консультация по текущим акциям" },
+        { icon: whiteflower, description: "Знакомство и общение с брендом" }
+    ];
+
     return (
         <div className={styles.home}>
             <div className={styles.shop}>
@@ -41,26 +87,9 @@ function Home() {
                     <p className={styles.welcomeMessage}>Добро пожаловать!</p>
                     <p className={styles.welcomeMessageHeading}>У нас вы найдете:</p>
                     <div className={styles.floralServicesSection}>
-                        <FloralDescriptionBox
-                            icon={lightgreenflower}
-                            heading="Широкий выбор цветов"
-                            description="От классических роз до экзотических орхидей"
-                        />
-                        <FloralDescriptionBox
-                            icon={lightgreenflower}
-                            heading="Свежие букеты"
-                            description="Мы создаем композиции на любой вкус и для любого случая"
-                        />
-                        <FloralDescriptionBox
-                            icon={lightgreenflower}
-                            heading="Оригинальные подарки"
-                            description="Цветочные корзины, композиции в шляпных коробках"
-                        />
-                        <FloralDescriptionBox
-                            icon={lightgreenflower}
-                            heading="Профессиональные флористы"
-                            description="Мы поможем вам создать идеальный букет и подобрать подходящий повод для его дарения"
-                        />
+                        {floralServices.map((service, index) => (
+                            <FloralDescriptionBox key={index} {...service} />
+                        ))}
                     </div>
                 </div>
 
@@ -69,21 +98,9 @@ function Home() {
                 <div className={styles.shopInfo} style={{ marginTop: '300px' }}>
                     <p className={styles.welcomeMessage}>Petals Whispers - это:</p>
                     <div className={styles.floralServicesSection}>
-                        <FloralDescriptionBox
-                            icon={pinkflower}
-                            heading="Качество"
-                            description="Мы работаем только со свежими и качественными цветами"
-                        />
-                        <FloralDescriptionBox
-                            icon={pinkflower}
-                            heading="Красота"
-                            description="Мы создаем букеты, которые радуют глаз и дарят эмоции"
-                        />
-                        <FloralDescriptionBox
-                            icon={pinkflower}
-                            heading="Удобство"
-                            description="Мы предлагаем удобные способы заказа и доставки"
-                        />
+                        {floralServices.slice(0, 3).map((service, index) => (
+                            <FloralDescriptionBox key={index} icon={pinkflower} {...service} />
+                        ))}
                     </div>
                 </div>
             </div>
@@ -91,10 +108,9 @@ function Home() {
             <div className={styles.catalog}>
                 <div className={styles.list}>
                     <div className={styles.listInner}>
-                        <CatalogSection image={first} description="Для особых случаев" marginTop="-130px" />
-                        <CatalogSection image={second} description="Для подарка без повода" marginTop="0" />
-                        <CatalogSection image={third} description="Акции и специальные предложения" marginTop="-130px" />
-                        <CatalogSection image={forth} description="Подарочные сертификаты" marginTop="0"/>
+                        {catalogSections.map((section, index) => (
+                            <CatalogSection key={index} {...section} />
+                        ))}
                     </div>
                 </div>
             </div>
@@ -103,9 +119,9 @@ function Home() {
                 <div className={styles.helperContent}>
                     <div className={styles.helperText}>
                         <div className={styles.helperHeading}>Персональный помощник</div>
-                        <HelperDescription icon={whiteflower} description="Рекомендации именно для вас и ваших близких" />
-                        <HelperDescription icon={whiteflower} description="Консультация по текущим акциям" />
-                        <HelperDescription icon={whiteflower} description="Знакомство и общение с брендом" />
+                        {helperDescriptions.map((description, index) => (
+                            <HelperDescription key={index} {...description} />
+                        ))}
                     </div>
                     <img src={taylor} alt="Taylor" className={styles.helperImage} />
                     <div className={styles.helperText2}>
@@ -116,6 +132,13 @@ function Home() {
                     </div>
                     <button className={styles.contactButtonStyle}>Связаться</button>
                 </div>
+            </div>
+
+            <div className={styles.reviewsSection}>
+                <h2 className={styles.reviewsHeading} style={{ marginBottom: "30px" }}>Отзывы наших клиентов</h2>
+                {reviews.map((review, index) => (
+                    <Review key={index} review={review} />
+                ))}
             </div>
         </div>
     );
